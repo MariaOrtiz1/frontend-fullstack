@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import championList from '../components/champion/championList';
+import ChampionList from '../components/champion/ChampionList';
 import { fetchChampionList } from '../services/championUtils';
 
 const ChampionListContainer = () => {
@@ -23,7 +23,7 @@ const ChampionListContainer = () => {
   }
   return (
     <>
-      <championList champion={champion}/>
+      <ChampionList champion={champion}/>
     </>
   );
 };

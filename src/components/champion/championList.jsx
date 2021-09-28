@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import singleChampion from './singleChampion';
+import SingleChampion from './SingleChampion';
 
-const championList = ({ champion }) => (
+const ChampionList = ({ champion }) => (
   <ul aria-label="champion-list">
     {champion.map((champion) => (
-      <Link key={singleChampion.id} to={`/${singleChampion.id}`}>
-        <li key={singleChampion.id}>
+      <Link key={SingleChampion.id} to={`/${SingleChampion.id}`}>
+        <li key={SingleChampion.id}>
           <singleChampion 
             name={champion.name}
             title={champion.title}
@@ -21,7 +21,7 @@ const championList = ({ champion }) => (
   </ul>
 );
 
-championList.propTypes = {
+ChampionList.propTypes = {
   champion: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -34,4 +34,4 @@ championList.propTypes = {
   ),
 };
 
-export default championList;
+export default ChampionList;

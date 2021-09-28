@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const singleChampion = ({
+const SingleChampion = ({
   name,
   title,
   quote,
   region,
   position,
 }) => (
-  <div aria-label="singleChampion">
+  <div aria-label="SingleChampion">
     <h2>{name}</h2>
     <p>{title}</p>
     <p>{quote}</p>
@@ -17,7 +17,7 @@ const singleChampion = ({
   </div>
 );
 
-singleChampion.propTypes = {
+SingleChampion.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   quote: PropTypes.string.isRequired,
@@ -25,4 +25,4 @@ singleChampion.propTypes = {
   position: PropTypes.string.isRequired,
 };
 
-export default singleChampion;
+export default SingleChampion;
